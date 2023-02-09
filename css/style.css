@@ -255,10 +255,7 @@ nav .navbar-toggler:focus {
   align-items: center;
   font-size: 18px;
 }
-.pricing .card .card-text span::before {
-  content: "\f058";
-  font-weight: 900;
-  font-family: "Font Awesome 6 Free";
+.pricing .card .card-text span svg {
   position: absolute;
   left: -40px;
   font-size: 22px;
