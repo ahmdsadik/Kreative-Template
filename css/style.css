@@ -257,8 +257,8 @@ nav .navbar-toggler:focus {
 }
 .pricing .card .card-text span::before {
   content: "\f058";
-  font-weight: 800;
-  font-family: var(--fa-style-family-classic);
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
   position: absolute;
   left: -40px;
   font-size: 22px;
