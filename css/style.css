@@ -1,0 +1,464 @@
+:root {
+  --blue-color: #0d6efd;
+  --black-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  font-family: "Sora", sans-serif;
+}
+
+.section-padding {
+  padding: 50px 0;
+}
+
+/* Start Header */
+nav .navbar-toggler {
+  border: none;
+  font-size: 30px;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+nav .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar-toggler:active {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+/* End Header */
+/* Start Landing */
+.landing {
+  background-image: url("../img/cover.jpg");
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.content {
+  position: relative;
+  z-index: 2;
+}
+/* End Landing */
+/* Start Services */
+.services .card {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+.services .card:hover {
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  box-shadow: none !important;
+}
+.services .card .card-text::selection,
+.services .card .card-title::selection {
+  background-color: rgb(0, 153, 255);
+  color: white;
+}
+.services .card:hover .card-text::selection,
+.services .card:hover .card-title::selection {
+  background-color: rgb(0, 153, 255);
+  color: black;
+}
+.services .card:hover .card-title {
+  color: white;
+}
+.services .card:hover .card-text {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.services .card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue-color);
+  top: -100%;
+  z-index: -1;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+
+.services .card:hover::before {
+  top: 0px;
+}
+
+.services .card-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--blue-color);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+.services .card:hover .card-icon,
+.services .card:focus .card-icon {
+  background-color: white;
+}
+.services .card-icon svg {
+  color: white;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+}
+.services .card:hover .card-icon svg,
+.services .card:focus .card-icon svg {
+  color: var(--blue-color);
+}
+/* End Services */
+/* Start Features */
+.feature-img img {
+  height: 100%;
+}
+.features .features-box {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 30px;
+}
+.features .feature-icon {
+  color: white;
+  width: 60px;
+  height: 60px;
+
+  background-color: var(--blue-color);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feature-text {
+  flex: 1;
+}
+/* End Features */
+/* Start Portfolio */
+.portfolio .card {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio .card:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  z-index: 1;
+  animation: darkBackground 1s;
+  -webkit-animation: darkBackground 1s;
+  animation-fill-mode: forwards;
+}
+.portfolio .card:hover img {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transition: all 0.9s ease;
+  -webkit-transition: all 0.9s ease;
+  -moz-transition: all 0.9s ease;
+  -ms-transition: all 0.9s ease;
+  -o-transition: all 0.9s ease;
+}
+.portfolio .card .card-img-overlay {
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+
+  flex-direction: column;
+  bottom: 20px;
+  opacity: 0;
+  transition: all 0.9s;
+  -webkit-transition: all 0.9s;
+  -moz-transition: all 0.9s;
+  -ms-transition: all 0.9s;
+  -o-transition: all 0.9s;
+}
+.portfolio .card:hover .card-img-overlay {
+  animation: overlay-text 1s;
+  -webkit-animation: overlay-text 1s ease;
+  animation-fill-mode: forwards;
+}
+.portfolio .card .card-title,
+.portfolio .card .card-text {
+  position: relative;
+}
+
+/* End Portfolio */
+/* Start Pricing */
+.pricing .card .card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.pricing .card {
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.pricing .card:hover {
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  box-shadow: none !important;
+}
+.pricing .card .card-text span {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 18px;
+}
+.pricing .card .card-text span::before {
+  content: "\f058";
+  font-weight: 800;
+  font-family: var(--fa-style-family-classic);
+  position: absolute;
+  left: -40px;
+  font-size: 22px;
+  color: var(--blue-color);
+}
+/* End Pricing */
+/* start Team */
+.team .card {
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+.team .card:hover {
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  box-shadow: none !important;
+}
+.team .card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100% !important;
+  -webkit-border-radius: 100% !important;
+  -moz-border-radius: 100% !important;
+  -ms-border-radius: 100% !important;
+  -o-border-radius: 100% !important;
+}
+.team .card .card-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.team .card .card-icons a {
+  width: 40px;
+  height: 40px;
+  background-color: var(--blue-color);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--blue-color);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+.team .card .card-icons a:hover {
+  background-color: white;
+}
+.team .card .card-icons a svg {
+  color: white;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+.team .card .card-icons a:hover svg {
+  color: var(--blue-color);
+}
+/* End Team */
+/* Start Blog */
+.blog .card {
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+.blog .card:hover {
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
+  box-shadow: none !important;
+}
+/* End Blog */
+/* Start Contact */
+.contact form ::placeholder {
+  color: var(--black-color);
+}
+.contact form input,
+.contact form textarea {
+  background-color: #eee;
+  border: none;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+}
+.contact form input:focus,
+.contact form textarea:focus {
+  box-shadow: none;
+  background-color: #eee;
+}
+.contact form textarea {
+  resize: none;
+}
+/* End Contact */
+/* Start Footer */
+footer .foot-1 h6 {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+footer .foot-1 h6 + div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+}
+footer .foot-1 h6 + div a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+footer .foot-1 h6 + div a:hover {
+  color: white;
+}
+footer .foot-2 .copyright {
+  color: rgba(255, 255, 255, 0.5);
+}
+footer .foot-2 .foot-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+footer .foot-2 .foot-icon a {
+  width: 40px;
+  height: 40px;
+  background-color: var(--blue-color);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--blue-color);
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+footer .foot-2 .foot-icon a:hover {
+  background-color: white;
+}
+footer .foot-2 .foot-icon a svg {
+  color: white;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+footer .foot-2 .foot-icon a:hover svg {
+  color: var(--blue-color);
+}
+/* End Footer */
+/* Animations */
+@keyframes darkBackground {
+  0% {
+    background-color: rgba(209, 196, 196, 0.26);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+@keyframes overlay-text {
+  0% {
+    opacity: 0.5;
+    z-index: 2;
+  }
+  50% {
+    opacity: 0.8;
+    z-index: 2;
+  }
+  100% {
+    z-index: 2;
+    opacity: 1;
+  }
+}
+/* Animations */
